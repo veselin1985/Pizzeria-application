@@ -1,13 +1,30 @@
 package com.spidermanteam.pizzeriaapp.model;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "menu")
 public class Product {
 
+    @Id
+    @Column(name="id")
     private String id;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="description")
     private String description;
+
+    @Column(name="size")
     private String size;
+
+    @Column(name="weight")
     private int weight;
+
+    @Column(name="price")
     private Double price;
+
+    @Column(name="picturePath")
     private String picturePath;
 
     public Product(String name, String description, String size, int weight, Double price, String picturePath) {

@@ -3,7 +3,9 @@ package com.spidermanteam.pizzeriaapp.config;
 import com.spidermanteam.pizzeriaapp.model.Product;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class AutoConfigProduct {
 
     @Bean
