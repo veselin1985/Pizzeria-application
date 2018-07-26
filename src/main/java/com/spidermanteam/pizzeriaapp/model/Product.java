@@ -1,4 +1,5 @@
 package com.spidermanteam.pizzeriaapp.model;
+
 import javax.persistence.*;
 
 @Entity
@@ -6,28 +7,29 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     private String id;
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name="size")
+    @Column(name = "size")
     private String size;
 
-    @Column(name="weight")
+    @Column(name = "weight")
     private int weight;
 
-    @Column(name="price")
+    @Column(name = "price")
     private Double price;
 
-    @Column(name="picturePath")
+    @Column(name = "picturePath")
     private String picturePath;
 
     public Product(String name, String description, String size, int weight, Double price, String picturePath) {
+
         this.name = name;
         this.description = description;
         this.size = size;
@@ -38,6 +40,14 @@ public class Product {
 
     public Product() {
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

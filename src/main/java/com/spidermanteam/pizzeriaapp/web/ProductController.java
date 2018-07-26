@@ -7,10 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api/products")
 public class ProductController {
 
@@ -27,14 +28,10 @@ public class ProductController {
 
     }
 
-    @GetMapping("/")
+    @GetMapping
     List<Product> listAll() {
         return productService.listAll();
     }
 
-    @GetMapping("/test")
-    Product test() {
-        Product test = new Product("11", "testDescription", "small", 500, 10.00, "testPath");
-        return test;
-    }
+
 }
