@@ -1,7 +1,6 @@
 package com.spidermanteam.pizzeriaapp.service;
 
 import com.spidermanteam.pizzeriaapp.data.ProductRepository;
-import com.spidermanteam.pizzeriaapp.data.ProductRepositoryImpl;
 import com.spidermanteam.pizzeriaapp.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

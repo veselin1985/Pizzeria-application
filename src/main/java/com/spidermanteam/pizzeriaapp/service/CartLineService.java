@@ -1,6 +1,5 @@
 package com.spidermanteam.pizzeriaapp.service;
 
-import com.spidermanteam.pizzeriaapp.model.Cart;
 import com.spidermanteam.pizzeriaapp.model.CartLine;
 
 import java.util.List;
