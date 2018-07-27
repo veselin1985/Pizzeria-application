@@ -1,5 +1,6 @@
 package com.spidermanteam.pizzeriaapp.config;
 
+import com.spidermanteam.pizzeriaapp.model.CartLine;
 import com.spidermanteam.pizzeriaapp.model.Product;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,7 @@ public class AutoConfigProduct {
         return new org.hibernate.cfg.Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Product.class)
+                .addAnnotatedClass(CartLine.class)
                 .buildSessionFactory();
     }
 }
