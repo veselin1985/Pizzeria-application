@@ -8,7 +8,7 @@ public class Product {
 
     @Id
     @Column(name = "id")
-    private String id;
+    private int id;
 
     @Column(name = "name")
     private String name;
@@ -34,11 +34,11 @@ public class Product {
 
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -80,7 +80,7 @@ public class Product {
         if(obj == null){
             return false;
         }
-        return this.id .equals (other.getId());
+        return this.id == (other.getId());
     }
 
     @Override
