@@ -11,7 +11,7 @@ public class CartLine {
 
     @OneToOne
     @JoinColumn(
-            name="id")
+            name="product")
     private Product product;
 
     @Column(name="quantity")

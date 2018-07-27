@@ -33,7 +33,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public Product findById(String id) {
+    public Product findById(int id) {
         Product product = null;
         try (Session session = factory.openSession()) {
             session.beginTransaction();

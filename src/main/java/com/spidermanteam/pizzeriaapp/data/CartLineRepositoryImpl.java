@@ -22,11 +22,19 @@ public class CartLineRepositoryImpl implements CartLineRepository {
 
     @Override
     public void add(CartLine cartLine) {
+        try (Session session = factory.openSession()) {
+            session.beginTransaction();
+            session.save(cartLine);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 
     @Override
     public void delete(CartLine cartLine) {
+
 
     }
 

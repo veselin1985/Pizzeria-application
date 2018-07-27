@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProductRepository {
 
     List<Product> listAll();
-    Product findById(String id);
+    Product findById(int id);
 }
