@@ -31,6 +31,11 @@ public class CartLineRepositoryImpl implements CartLineRepository {
     }
 
     @Override
+    public void deleteAll() {
+
+    }
+
+    @Override
     public void update(CartLine cartLine) {
 
     }
