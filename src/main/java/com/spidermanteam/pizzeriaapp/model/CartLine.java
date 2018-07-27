@@ -30,6 +30,14 @@ public class CartLine {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Product getProduct() {
         return product;
     }
