@@ -97,4 +97,18 @@ public class Product {
     public void setPicturePath(String picturePath) {
         this.picturePath = picturePath;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Product other = (Product)obj;
+        if(obj == null){
+            return false;
+        }
+        return this.id .equals (other.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode()*37;
+    }
 }
