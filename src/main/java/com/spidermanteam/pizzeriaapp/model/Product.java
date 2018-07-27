@@ -16,24 +16,16 @@ public class Product {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "size")
-    private String size;
-
-    @Column(name = "weight")
-    private int weight;
-
     @Column(name = "price")
     private Double price;
 
     @Column(name = "picturePath")
     private String picturePath;
 
-    public Product(String name, String description, String size, int weight, Double price, String picturePath) {
+    public Product(String name, String description, Double price, String picturePath) {
 
         this.name = name;
         this.description = description;
-        this.size = size;
-        this.weight = weight;
         this.price = price;
         this.picturePath = picturePath;
     }
@@ -64,22 +56,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
     }
 
     public Double getPrice() {

@@ -1,10 +1,23 @@
 package com.spidermanteam.pizzeriaapp.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="cart_lines")
 public class CartLine {
 
+    @Id
     private int id;
+
+    @OneToOne
+    @JoinColumn(
+            name="id")
     private Product product;
+
+    @Column(name="quantity")
     private int quantity;
+
+    @Column(name="subSum")
     private Double subSum;
 
     public CartLine(Product product, int quantity, Double subSum) {
