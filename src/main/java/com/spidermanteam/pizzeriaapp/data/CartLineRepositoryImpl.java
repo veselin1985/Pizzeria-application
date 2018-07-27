@@ -16,7 +16,7 @@ public class CartLineRepositoryImpl implements CartLineRepository {
     private SessionFactory factory;
 
     @Autowired
-    public CartLineRepositoryImpl(SessionFactory factory){
+    public CartLineRepositoryImpl(SessionFactory factory) {
         this.factory = factory;
     }
 
@@ -34,8 +34,16 @@ public class CartLineRepositoryImpl implements CartLineRepository {
 
     @Override
     public void delete(CartLine cartLine) {
-
-
+        List<CartLine> cartLines = new ArrayList<>();
+        try (Session session = factory.openSession()) {
+            session.beginTransaction();
+            cartLines = session.createQuery("from CartLine").list();
+            cartLines.remove(cartLine);
+            session.save(cartLines);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
