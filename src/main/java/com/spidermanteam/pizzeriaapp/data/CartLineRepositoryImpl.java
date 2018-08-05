@@ -48,11 +48,23 @@ public class CartLineRepositoryImpl implements CartLineRepository {
 
     @Override
     public void deleteAll() {
+        List<CartLine> cartLines = new ArrayList<>();
+        try (Session session = factory.openSession()) {
+            session.beginTransaction();
+            cartLines = session.createQuery("from CartLine").list();
+            cartLines.clear();
+            session.save(cartLines);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
 
     }
 
     @Override
     public void update(CartLine cartLine) {
+
 
     }
 
