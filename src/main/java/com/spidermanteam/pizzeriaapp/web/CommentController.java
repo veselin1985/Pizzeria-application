@@ -2,6 +2,7 @@ package com.spidermanteam.pizzeriaapp.web;
 
 import com.spidermanteam.pizzeriaapp.model.Comment;
 import com.spidermanteam.pizzeriaapp.service.CommentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +13,7 @@ public class CommentController {
 
     private CommentService commentService;
 
+    @Autowired
     public CommentController(CommentService commentService) {
         this.commentService = commentService;
     }

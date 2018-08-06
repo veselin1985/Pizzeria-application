@@ -1,9 +1,11 @@
-$("#sendButton").on("click", function(){
+$("#sendComment").on("click", function(event){
 
-    var name = null;
-    var email = null;
-    var topic = null;
-    var comment = null;
+    event.preventDefault();
+
+    var name = $("#nameComment").val().trim();
+    var email = $("#emailComment").val().trim();
+    var topic = $("#topicComment").val().trim();
+    var text = $("#textComment").val().trim();
 
 
     
@@ -30,3 +32,5 @@ $("#sendButton").on("click", function(){
 
     })
 })
+var productName = product.name;
+$("#container").html("<div class='but'>"+productName+"</div>");

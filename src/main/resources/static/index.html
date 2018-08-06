@@ -459,23 +459,23 @@
                             <div class="single_widget_form text-left">
                                 <form action="#" id="formid">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Име" required="">
+                                        <input id="nameComment" type="text" class="form-control" name="name" placeholder="Име" required="">
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                                        <input id="emailComment" type="email" class="form-control" name="email" placeholder="Email" required="">
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Тема">
+                                        <input id="topicComment" type="text" class="form-control" placeholder="Тема">
                                     </div>
                                     <!-- end of form-group -->
 
                                     <div class="form-group">
-                                        <textarea class="form-control" name="message" rows="3" placeholder="Какво бихме могли да подобрим?"></textarea>
+                                        <textarea id="textComment" class="form-control" name="message" rows="3" placeholder="Какво бихме могли да подобрим?"></textarea>
                                     </div>
 
-                                    <input type="submit" value="изпрати" class="btn btn-primary">
+                                    <input id="sendComment" type="submit" value="изпрати" class="btn btn-primary">
                                 </form>
                             </div>
                         </div>
@@ -502,6 +502,8 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cartAJAX.js"></script>
+    <script src="assets/js/commentAJAX.js"></script>
+
 </body>
 
 </html>
