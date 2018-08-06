@@ -3,6 +3,7 @@ package com.spidermanteam.pizzeriaapp.data;
 import com.spidermanteam.pizzeriaapp.model.Comment;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -12,6 +13,11 @@ import java.util.List;
 public class CommentRepositoryImpl implements CommentRepository {
 
     private SessionFactory factory;
+
+    @Autowired
+    public CommentRepositoryImpl(SessionFactory factory) {
+        this.factory = factory;
+    }
 
     @Override
     public void addComment(Comment comment) {
