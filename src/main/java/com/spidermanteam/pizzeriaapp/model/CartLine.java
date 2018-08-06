@@ -61,4 +61,18 @@ public class CartLine {
     public void setSubSum(Double subSum) {
         this.subSum = subSum;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        CartLine other = (CartLine) obj;
+        if(obj == null){
+            return false;
+        }
+        return this.product.hashCode() == (other.product.hashCode());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.product.hashCode()*37;
+    }
 }

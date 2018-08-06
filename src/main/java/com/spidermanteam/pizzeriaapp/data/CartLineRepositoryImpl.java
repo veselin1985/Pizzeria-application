@@ -22,9 +22,32 @@ public class CartLineRepositoryImpl implements CartLineRepository {
 
     @Override
     public void add(CartLine cartLine) {
+        List<CartLine> cartLines = new ArrayList<>();
         try (Session session = factory.openSession()) {
             session.beginTransaction();
-            session.save(cartLine);
+            cartLines = session.createQuery("from CartLine").list();
+            if (cartLines.size() == 0) {
+                session.save(cartLine);
+            } else {
+                if (cartLines.contains(cartLine))
+                    for (CartLine cart : cartLines
+                    ) {
+                        if (cart.getProduct().equals(cartLine.getProduct())) {
+                            int updateQty = cart.getQuantity() + 1;
+                            cart.setQuantity(updateQty);
+                            double updateSubSum = cart.getQuantity()*cart.getProduct().getPrice();
+                            cart.setSubSum(updateSubSum);
+                            session.save(cart);
+                            break;
+                        }
+                    }
+                else {
+                    double updateSubSum = cartLine.getQuantity()*cartLine.getProduct().getPrice();
+                    cartLine.setSubSum(updateSubSum);
+                    session.save(cartLine);
+                }
+            }
+
             session.getTransaction().commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -60,9 +83,6 @@ public class CartLineRepositoryImpl implements CartLineRepository {
 
     @Override
     public void update(CartLine cartLine) {
-
-
-
 
 
     }
