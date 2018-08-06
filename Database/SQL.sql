@@ -25,14 +25,32 @@ CREATE TABLE IF NOT EXISTS `cart_lines` (
   PRIMARY KEY (`id`),
   KEY `FK_cart_lines_menu` (`product`),
   CONSTRAINT `FK_cart_lines_menu` FOREIGN KEY (`product`) REFERENCES `menu` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
--- Dumping data for table pizza.cart_lines: ~6 rows (approximately)
+-- Dumping data for table pizza.cart_lines: ~0 rows (approximately)
 /*!40000 ALTER TABLE `cart_lines` DISABLE KEYS */;
 INSERT INTO `cart_lines` (`id`, `product`, `quantity`, `subSum`) VALUES
-	(1, 1, 1, 2),
-	(2, 3, 1, 2);
+	(40, 1, 2, 17),
+	(41, 3, 2, 19.2);
 /*!40000 ALTER TABLE `cart_lines` ENABLE KEYS */;
+
+-- Dumping structure for table pizza.comments
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `topic` varchar(50) NOT NULL,
+  `comment` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table pizza.comments: ~2 rows (approximately)
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO `comments` (`id`, `name`, `email`, `topic`, `comment`) VALUES
+	(1, 'Venci StefanoFF', 'venci@prezident.bg', 'SuperQkitePizziMAN', 'Gladen sum Bace'),
+	(2, 'Elin Topuzakov', 'topuzakov@arda.bg', 'Pizza', 'Glad maika glad'),
+	(3, 'Venci StefanoFF', 'venci@prezident.bg', 'SuperQkitePizziMAN', 'Gladensum');
+/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 
 -- Dumping structure for table pizza.hibernate_sequence
 CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
@@ -59,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Dumping data for table pizza.menu: ~16 rows (approximately)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`id`, `name`, `description`, `price`, `picturePath`) VALUES
-	(1, 'Маргарита', 'Доматен cart_linesсос, Extra Моцарела', 8.5, NULL),
+	(1, 'Маргарита', 'Доматен сос, Extra Моцарела', 8.5, NULL),
 	(2, 'Медитеранео', 'Доматен сос, Моцарела, Краве сирене, Черни маслини, Пресни домати, Пресни зелени чушки ', 9.3, NULL),
 	(3, 'Алфредо', 'Сметана, Моцарела, Пиле, Бейби Спанак', 9.6, NULL),
 	(4, 'Чикината', 'Доматен сос, Моцарела, Ементал, Пеперони, Пиле, Пресни домати', 10.9, NULL),
