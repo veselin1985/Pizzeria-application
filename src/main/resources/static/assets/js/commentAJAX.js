@@ -32,5 +32,3 @@ $("#sendComment").on("click", function(event){
 
     })
 })
-var productName = product.name;
-$("#container").html("<div class='but'>"+productName+"</div>");
