@@ -68,7 +68,7 @@ public class CartLine {
         if(obj == null){
             return false;
         }
-        return this.product.hashCode() == (other.product.hashCode());
+        return this.product.hashCode() == other.product.hashCode();
     }
 
     @Override
