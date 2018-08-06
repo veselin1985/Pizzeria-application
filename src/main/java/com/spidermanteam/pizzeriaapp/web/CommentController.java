@@ -20,6 +20,7 @@ public class CommentController {
     void addComment(@RequestBody Comment comment){
         commentService.addComment(comment);
     }
+
     @GetMapping
     List<Comment> listAllComments(){
         return commentService.listAllComments();
