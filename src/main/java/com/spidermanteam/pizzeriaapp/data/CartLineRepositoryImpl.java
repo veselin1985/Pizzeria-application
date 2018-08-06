@@ -56,8 +56,6 @@ public class CartLineRepositoryImpl implements CartLineRepository {
             System.out.println(e.getMessage());
         }
 
-
-
     }
 
     @Override
