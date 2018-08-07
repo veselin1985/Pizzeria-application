@@ -8,10 +8,10 @@ $('.btn-primary').click(function (){
   itemCount ++;
 
   $('#itemCount').text(itemCount).css('display', 'block');
-  $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem">Remove Item</button>');
+  $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem" price="' + $(this).parent().find('.product_price span').text() +'">Remove Item</button>');
 
   // Calculate Total Price
-  var price = parseInt($(this).siblings().find('.price').text()); 
+  var price = Number($(this).parent().find('.product_price span').text());
   priceTotal += price;
   $('#cartTotal').text("Total: €" + priceTotal);
 }); 
@@ -38,16 +38,23 @@ $('#emptyCart').click(function() {
 
 // Remove Item From Cart
 $('#shoppingCart').on('click', '.removeItem', function(){
+  
+  
   $(this).parent().remove();  
   itemCount --;
   $('#itemCount').text(itemCount);
 
   // Remove Cost of Deleted Item from Total Price
-  var price = parseInt($(this).siblings().find('.price').text());
+  var price = Number($(this).attr('price'));
   priceTotal -= price;
+
+
+
   $('#cartTotal').text("Total: €" + priceTotal);
 
   if (itemCount == 0) {
     $('#itemCount').css('display', 'none');
+    priceTotal=0;
+    $('#cartTotal').text("Total: €" + priceTotal);
   }
 });

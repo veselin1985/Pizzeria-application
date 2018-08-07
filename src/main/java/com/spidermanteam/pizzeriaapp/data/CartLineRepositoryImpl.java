@@ -32,8 +32,7 @@ public class CartLineRepositoryImpl implements CartLineRepository {
                 session.save(cartLine);
             } else {
                 if (cartLines.contains(cartLine))
-                    for (CartLine cart : cartLines
-                    ) {
+                    for (CartLine cart : cartLines) {
                         if (cart.getProduct().equals(cartLine.getProduct())) {
                             int updateQty = cart.getQuantity() + 1;
                             cart.setQuantity(updateQty);

@@ -56,6 +56,19 @@
             </div>
         </div>
 
+        <!-- cart -->
+
+        <div id="shoppingCart">
+            <div id="cartItemsContainer">
+                <h2>Items in your cart</h2>
+                <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
+                <div id="cartItems">
+                </div>
+                <span id="cartTotal"></span>
+            </div>
+        </div>
+
+
         <!-- End navbar-collapse-->
 
         <div class="main_menu_bg">
@@ -88,7 +101,9 @@
                                         <a href="#portfolio">Доставка</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="booking">Запази маса</a>
+                                        <i class="fa fa-shopping-cart fa-2x openCloseCart" aria-hidden="true"></i>
+                                        <span id="itemCount"></span>
+                                        <!-- <a href="#" class="booking">Запази маса</a> -->
                                     </li>
                                 </ul>
                             </div>
@@ -169,148 +184,148 @@
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/margarita-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Маргарита</h6>
+                                        <h6 class="product_name">Маргарита</h6>
                                         <p class="product_description">Доматен сос, Extra Моцарела</p>
-                                        <p class="product_price">8.50 лв.</p>
+                                        <p class="product_price"><span>8.50</span> лв.</p>
                                         <a href="" value="1" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/mediterraneo-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Медитеранео</h6>
+                                        <h6 class="product_name">Медитеранео</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Краве сирене, Черни маслини, Пресни домати, Пресни зелени
                                             чушки
                                         </p>
-                                        <p class="product_price">9.30 лв.</p>
+                                        <p class="product_price"><span>9.30</span> лв.</p>
                                         <a href="" value="2" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/alfredo-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Алфредо</h6>
+                                        <h6 class="product_name">Алфредо</h6>
                                         <p class="product_description">Сметана, Моцарела, Пиле, Бейби Спанак</p>
-                                        <p class="product_price">9.60 лв.</p>
+                                        <p class="product_price"><span>9.60</span> лв.</p>
                                         <a href="" value="3" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/chekinata-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Чикинита</h6>
+                                        <h6 class="product_name">Чикинита</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Ементал, Пеперони, Пиле, Пресни домати</p>
-                                        <p class="product_price">10.90 лв.</p>
+                                        <p class="product_price"><span>10.90</span> лв.</p>
                                         <a href="" value="4" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/special-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Специална</h6>
+                                        <h6 class="product_name">Специална</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Пушена шунка, Пушен бекон, Пресни зелени чушки, Пресни гъби,
                                             Лук
                                         </p>
-                                        <p class="product_price">10.70 лв.</p>
+                                        <p class="product_price"><span>10.70</span> лв.</p>
                                         <a href="" value="5" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/chik-chirik-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Чик–Чи–Рик</h6>
+                                        <h6 class="product_name">Чик–Чи–Рик</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Топено сирене, Пиле, Царевица</p>
-                                        <p class="product_price">11.00 лв.</p>
+                                        <p class="product_price"><span>11.00</span> лв.</p>
                                         <a href="" value="6" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/karbonara-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Карбонара</h6>
+                                        <h6 class="product_name">Карбонара</h6>
                                         <p class="product_description">Сметана, Моцарела, Пушен бекон, Пресни гъби</p>
-                                        <p class="product_price">9.90 лв.</p>
+                                        <p class="product_price"><span>9.90</span> лв.</p>
                                         <a href="" value="7" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/peperoni-classic-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Пеперони</h6>
+                                        <h6 class="product_name">Пеперони</h6>
                                         <p class="product_description">Доматен сос, Extra Моцарела, Extra Пеперони</p>
-                                        <p class="product_price">10.90 лв.</p>
+                                        <p class="product_price"><span>10.90</span> лв.</p>
                                         <a href="" value="8" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/barbeque-chicken-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Барбекю пиле</h6>
+                                        <h6 class="product_name">Барбекю пиле</h6>
                                         <p class="product_description">Барбекю сос, Моцарела, Пиле, Пушен бекон</p>
-                                        <p class="product_price">10.60 лв.</p>
+                                        <p class="product_price"><span>10.60</span> лв.</p>
                                         <a href="" value="9" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/barbeque-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Барбекю класик</h6>
+                                        <h6 class="product_name">Барбекю класик</h6>
                                         <p class="product_description">Барбекю сос, Моцарела, Пушен бекон, Пикантно телешко</p>
-                                        <p class="product_price">10.60 лв.</p>
+                                        <p class="product_price"><span>10.60</span> лв.</p>
                                         <a href="" value="10" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/new-york-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Ню Йорк</h6>
+                                        <h6 class="product_name">Ню Йорк</h6>
                                         <p class="product_description">Доматен сос, Extra Чедар сирене, Моцарела, Пушен бекон, Пресни гъби</p>
-                                        <p class="product_price">10.90 лв.</p>
+                                        <p class="product_price"><span>10.90</span> лв.</p>
                                         <a href="" value="11" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/ham-classic-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Шунка класик</h6>
+                                        <h6 class="product_name">Шунка класик</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Пушена шунка, Пресни зелени чушки, Пресни гъби</p>
-                                        <p class="product_price">9.30 лв.</p>
+                                        <p class="product_price"><span>9.30</span> лв.</p>
                                         <a href="" value="12" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/italian-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Италианска</h6>
+                                        <h6 class="product_name">Италианска</h6>
                                         <p class="product_description">Доматен сос, Босилек, Пармезан, Моцарела, Пресни домати, Песто сос</p>
-                                        <p class="product_price">9.90 лв.</p>
+                                        <p class="product_price"><span>9.90</span> лв.</p>
                                         <a href="" value="13" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/hawaii-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Хавай</h6>
+                                        <h6 class="product_name">Хавай</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Пушена шунка, Ананас</p>
-                                        <p class="product_price">10.30 лв.</p>
+                                        <p class="product_price"><span>10.30</span> лв.</p>
                                         <a href="" value="14" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/formagi-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Формаджи</h6>
+                                        <h6 class="product_name">Формаджи</h6>
                                         <p class="product_description">Доматен сос, Чедар сирене, Моцарела, Краве сирене, Пармезан</p>
-                                        <p class="product_price">9.50 лв.</p>
+                                        <p class="product_price"><span>9.50</span> лв.</p>
                                         <a href="" value="15" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
                                     <img src="assets/images/tuna-medium.png" alt="" />
                                     <div class="portfolio_images_overlay text-center">
-                                        <h6>Туна</h6>
+                                        <h6 class="product_name">Туна</h6>
                                         <p class="product_description">Доматен сос, Моцарела, Риба тон, Пресни домати, Лук</p>
-                                        <p class="product_price">9.90 лв.</p>
+                                        <p class="product_price"><span>9.90</span> лв.</p>
                                         <a href="" value="16" class="btn btn-primary">Добави в кошницата</a>
                                     </div>
                                 </div>
@@ -343,7 +358,8 @@
                                     <li> Шардоне и коломбард.............................................24.5 лв.</li>
                                     <li> Мерло.......................................................................24.5 лв.</li>
                                     <li> Каберне сувиньон....................................................24.5 лв.</li>
-                                    <li> Сира..........................................................................24.5 лв. </li>
+                                    <li> Сира..........................................................................24.5 лв.
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -378,7 +394,8 @@
                                     <li> Шоколадово суфле...................................................6.50 лв. </li>
                                     <li> Крем карамел............................................................4.00 лв. </li>
                                     <li> Крем брюле...............................................................4.50 лв. </li>
-                                    <li> Мелба........................................................................4.90 лв. </li>
+                                    <li> Мелба........................................................................4.90 лв.
+                                    </li>
                                     <li> Домашна бисквитена торта.....................................4.00 лв. </li>
                                 </ul>
                             </div>
@@ -438,7 +455,10 @@
 
                     <div class="col-md-4">
                         <div class="single_widget wow fadeIn" data-wow-duration="4s">
-                            <h3><br/>Работно време<br/></h3>
+                            <h3>
+                                <br/>Работно време
+                                <br/>
+                            </h3>
 
                             <div class="single_widget_info">
                                 <p>
@@ -495,14 +515,13 @@
 
 
     <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-
     <script src="assets/js/jquery-easing/jquery.easing.1.3.js"></script>
     <script src="assets/js/wow/wow.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cartAJAX.js"></script>
     <script src="assets/js/commentAJAX.js"></script>
+    <script src="assets/js/cart.js"></script>
 
 </body>
 
