@@ -8,12 +8,12 @@ $('.btn-primary').click(function (){
   itemCount ++;
 
   $('#itemCount').text(itemCount).css('display', 'block');
-  $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem" price="' + $(this).parent().find('.product_price span').text() +'">Remove Item</button>');
+  $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem" price="' + $(this).parent().find('.product_price span').text() +'">Премахни</button>');
 
   // Calculate Total Price
   var price = Number($(this).parent().find('.product_price span').text());
   priceTotal += price;
-  $('#cartTotal').text("Total: €" + priceTotal);
+  $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
 }); 
 
 
@@ -31,7 +31,7 @@ $('#emptyCart').click(function() {
 
   $('#itemCount').css('display', 'none');
   $('#cartItems').text('');
-  $('#cartTotal').text("Total: €" + priceTotal);
+  $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
 }); 
 
 
@@ -50,11 +50,11 @@ $('#shoppingCart').on('click', '.removeItem', function(){
 
 
 
-  $('#cartTotal').text("Total: €" + priceTotal);
+  $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
 
   if (itemCount == 0) {
     $('#itemCount').css('display', 'none');
     priceTotal=0;
-    $('#cartTotal').text("Total: €" + priceTotal);
+    $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
   }
 });
