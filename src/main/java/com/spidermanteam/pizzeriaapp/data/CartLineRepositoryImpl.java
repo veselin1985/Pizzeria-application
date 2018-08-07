@@ -27,6 +27,8 @@ public class CartLineRepositoryImpl implements CartLineRepository {
             session.beginTransaction();
             cartLines = session.createQuery("from CartLine").list();
             if (cartLines.size() == 0) {
+                double updateSubSum = cartLine.getQuantity()*cartLine.getProduct().getPrice();
+                cartLine.setSubSum(updateSubSum);
                 session.save(cartLine);
             } else {
                 if (cartLines.contains(cartLine))

@@ -1,6 +1,6 @@
-$("#sendComment").on("click", function(event){
+$("#sendComment").on("click", function(){
 
-    event.preventDefault();
+    
 
     var name = $("#nameComment").val().trim();
     var email = $("#emailComment").val().trim();
