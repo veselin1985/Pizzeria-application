@@ -9,7 +9,8 @@ $('.btn-primary').click(function (){
 
   $('#itemCount').text(itemCount).css('display', 'block');
   $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem" price="' + $(this).parent().find('.product_price span').text() +'">Премахни</button>');
-
+ 
+  $('#send_reservation').css('display', 'block');
   // Calculate Total Price
   var price = Number($(this).parent().find('.product_price span').text());
   priceTotal += price;
@@ -29,6 +30,7 @@ $('#emptyCart').click(function() {
   itemCount = 0;
   priceTotal = 0;
 
+  $('#send_reservation').css('display', 'none');
   $('#itemCount').css('display', 'none');
   $('#cartItems').text('');
   $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
@@ -53,6 +55,7 @@ $('#shoppingCart').on('click', '.removeItem', function(){
   $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
 
   if (itemCount == 0) {
+    $('#send_reservation').css('display', 'none');
     $('#itemCount').css('display', 'none');
     priceTotal=0;
     $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
