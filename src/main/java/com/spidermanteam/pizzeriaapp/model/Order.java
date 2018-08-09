@@ -11,16 +11,16 @@ public class Order {
     private int id;
 
     @OneToMany
-    @JoinColumn(name = "Product")
-    private List<Product> productList;
+    @JoinColumn(name = "OrderProduct")
+    private List<OrderProduct> orderProductList;
 
     private int status;
 
     @Column(name = "total_sum")
     private double totalSum;
 
-    public Order(List<Product> productList, int status, double totalSum) {
-        this.productList = productList;
+    public Order(List<OrderProduct> productList, int status, double totalSum) {
+        this.orderProductList = productList;
         this.totalSum = totalSum;
     }
 
@@ -35,12 +35,12 @@ public class Order {
         this.id = id;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public List<OrderProduct> getOrderProductList() {
+        return orderProductList;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setOrderProductList(List<OrderProduct> productList) {
+        this.orderProductList = productList;
     }
 
     public double getTotalSum() {
