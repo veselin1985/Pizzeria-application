@@ -20,6 +20,11 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
+    public void addOrder(Order order) {
+        orderRepository.addOrder(order);
+    }
+
+    @Override
     public List<Order> listAllOrders() {
         return orderRepository.listAllOrders();
     }

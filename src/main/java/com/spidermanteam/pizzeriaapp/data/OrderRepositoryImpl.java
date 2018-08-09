@@ -22,6 +22,17 @@ public class OrderRepositoryImpl  implements OrderRepository {
 
 
     @Override
+    public void addOrder(Order order) {
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            session.save(order);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
     public List<Order> listAllOrders() {
         List<Order> orders = new ArrayList<>();
         try (Session session = sessionFactory.openSession()) {
