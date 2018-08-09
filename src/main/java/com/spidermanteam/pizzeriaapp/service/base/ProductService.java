@@ -1,4 +1,4 @@
-package com.spidermanteam.pizzeriaapp.service;
+package com.spidermanteam.pizzeriaapp.service.base;
 
 import com.spidermanteam.pizzeriaapp.model.Product;
 

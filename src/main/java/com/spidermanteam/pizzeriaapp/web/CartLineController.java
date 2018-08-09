@@ -1,7 +1,7 @@
 package com.spidermanteam.pizzeriaapp.web;
 
 import com.spidermanteam.pizzeriaapp.model.CartLine;
-import com.spidermanteam.pizzeriaapp.service.CartLineService;
+import com.spidermanteam.pizzeriaapp.service.base.CartLineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

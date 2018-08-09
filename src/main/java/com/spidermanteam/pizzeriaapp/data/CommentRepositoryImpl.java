@@ -1,5 +1,6 @@
 package com.spidermanteam.pizzeriaapp.data;
 
+import com.spidermanteam.pizzeriaapp.data.base.CommentRepository;
 import com.spidermanteam.pizzeriaapp.model.Comment;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

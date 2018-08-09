@@ -1,11 +1,11 @@
-package com.spidermanteam.pizzeriaapp.service;
+package com.spidermanteam.pizzeriaapp.data.base;
 
 import com.spidermanteam.pizzeriaapp.model.Comment;
 
 import java.util.List;
 
-public interface CommentService {
+public interface CommentRepository {
 
     void addComment(Comment comment);
-    List<Comment> listAllComments();
+    List<Comment> listAll();
 }

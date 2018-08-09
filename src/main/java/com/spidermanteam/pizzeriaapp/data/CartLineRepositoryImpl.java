@@ -1,7 +1,7 @@
 package com.spidermanteam.pizzeriaapp.data;
 
+import com.spidermanteam.pizzeriaapp.data.base.CartLineRepository;
 import com.spidermanteam.pizzeriaapp.model.CartLine;
-import com.spidermanteam.pizzeriaapp.model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

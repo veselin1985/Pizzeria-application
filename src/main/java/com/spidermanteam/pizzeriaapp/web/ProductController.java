@@ -1,7 +1,7 @@
 package com.spidermanteam.pizzeriaapp.web;
 
 import com.spidermanteam.pizzeriaapp.model.Product;
-import com.spidermanteam.pizzeriaapp.service.ProductService;
+import com.spidermanteam.pizzeriaapp.service.base.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

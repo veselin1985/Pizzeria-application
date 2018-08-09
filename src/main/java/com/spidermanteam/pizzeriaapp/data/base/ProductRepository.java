@@ -1,4 +1,4 @@
-package com.spidermanteam.pizzeriaapp.data;
+package com.spidermanteam.pizzeriaapp.data.base;
 
 import com.spidermanteam.pizzeriaapp.model.Product;
 
