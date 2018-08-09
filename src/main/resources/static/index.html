@@ -37,7 +37,12 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class='preloader'>
+    
+    <div id="background-dimmer" class="hidden">
+
+    </div>
+    
+        <div class='preloader'>
         <div class='loaded'>&nbsp;</div>
     </div>
     <header id="home" class="navbar-fixed-top">
@@ -60,10 +65,12 @@
 
         <div id="shoppingCart">
             <div id="cartItemsContainer">
-                <h2>Продукти във вашата кошница</h2>
+                <h3>Продукти във вашата кошница</h3>
+                <hr id="cartUpperHorizontalLine">
                 <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
                 <div id="cartItems">
                 </div>
+                <hr id="cartUpperHorizontalLine">
                 <span id="cartTotal"></span>
                 <button id="send_reservation" class="removeItem">Поръчай</button>
             </div>
@@ -86,7 +93,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand our_logo" href="#">
+                                <a class="navbar-brand our_logo">
                                     <img src="assets/images/logoo.png" alt="" />
                                 </a>
                             </div>

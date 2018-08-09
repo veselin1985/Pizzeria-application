@@ -1191,20 +1191,66 @@ i:hover {
     width: 100%;
     display: none;
     position: absolute;
-    z-index: 9999;
+    z-index: 100001;
     background: rgba(0, 0, 0, 0.6);
 }
 
 #cartItemsContainer {
     position: relative;
-    width: 600px;
+    width: 650px;
     left: 50%;
     top: 150px;
     margin-left: -300px;
     padding: 40px;
     box-shadow: 0 0 10px black;
-    background: #e9e9e9;
+    background:black;
     overflow: auto;
+}
+#cartItemsContainer h3{
+    color: #e7a331;
+}
+
+#cartItems{
+    color: #e7a331;
+}
+
+#cartItems:hover{
+    color: #e7a331;
+    font-weight: 500;
+}
+
+#cartUpperHorizontalLine{
+    color: #e7a331;
+}
+
+#cartTotal{
+    color: #e7a331;
+    font-weight: 800;
+}
+
+.removeItem{
+    background: transparent;
+    border-color: #e7a331;
+    border-radius: 10px;
+    font-weight: 400;
+}
+.removeItem:hover{
+    background: #e7a331;
+    color: #000;
+}
+
+#send_reservation{
+    background: transparent;
+    color: #E7A331;
+    border-color: #e7a331;
+    border-radius: 10px;
+    font-weight: 800;
+
+}
+
+#send_reservation:hover{
+    background: #e7a331;
+    color: #000;
 }
 
 #cartItemsContainer i {
@@ -1241,5 +1287,18 @@ i:hover {
     margin-left: 40px;
 }
 #send_reservation {
+    display: none;
+}
+
+#background-dimmer{
+    position: fixed;
+    background-color: grey;
+    opacity: 0.7;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
     display: none;
 }

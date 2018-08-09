@@ -7,6 +7,7 @@ var priceTotal = 0;
 $('.btn-primary').click(function (){
   itemCount ++;
 
+
   $('#itemCount').text(itemCount).css('display', 'block');
   $(this).siblings('.product_name').clone().appendTo('#cartItems').append('<button class="removeItem" price="' + $(this).parent().find('.product_price span').text() +'">Премахни</button>');
  
@@ -20,7 +21,13 @@ $('.btn-primary').click(function (){
 
 
 // Hide and Show Cart Items
+$('#send_reservation').click(function(){
+  $('#background-dimmer').toggleClass('hidden');
+});
+
+
 $('.openCloseCart').click(function(){
+  $('#background-dimmer').toggleClass('hidden');
   $('#shoppingCart').toggle();
 });
 
@@ -32,6 +39,7 @@ $('#emptyCart').click(function() {
 
   $('#send_reservation').css('display', 'none');
   $('#itemCount').css('display', 'none');
+  $('#cartUpperHorizontalLine').css('display', 'none');
   $('#cartItems').text('');
   $('#cartTotal').text("Общо: " + priceTotal.toFixed(2)+" лв.");
 }); 
